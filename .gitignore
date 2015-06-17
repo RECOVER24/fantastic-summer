@@ -1,0 +1,13 @@
+**/target/
+**/bin/
+
+**/.settings/
+**/.classpath
+**/.project
+**/.springBeans
+
+**/.DS_Store
+
+**/bower_components
+**/node_modules
+**/node
