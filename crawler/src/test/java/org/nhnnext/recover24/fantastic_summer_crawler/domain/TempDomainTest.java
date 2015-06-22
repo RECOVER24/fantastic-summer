@@ -4,9 +4,9 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class DomainTest {
+public class TempDomainTest {
 	
-	private static final Logger log = LoggerFactory.getLogger(DomainTest.class);
+	private static final Logger log = LoggerFactory.getLogger(TempDomainTest.class);
 	
 	@Test
 	public void printHello() {
