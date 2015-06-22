@@ -1,4 +1,4 @@
-package org.nhnnext.recover24.fantastic_summer_viewer.controller;
+package org.nhnnext.recover24.fantastic_summer_crawler.controller;
 
 public class ControllerTest {
 

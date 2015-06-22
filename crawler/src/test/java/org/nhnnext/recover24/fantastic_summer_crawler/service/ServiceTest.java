@@ -1,4 +1,4 @@
-package org.nhnnext.recover24.fantastic_summer_viewer.service;
+package org.nhnnext.recover24.fantastic_summer_crawler.service;
 
 public class ServiceTest {
 

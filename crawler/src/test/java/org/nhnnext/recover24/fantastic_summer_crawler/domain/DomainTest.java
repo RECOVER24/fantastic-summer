@@ -1,4 +1,4 @@
-package org.nhnnext.recover24.fantastic_summer_viewer.domain;
+package org.nhnnext.recover24.fantastic_summer_crawler.domain;
 
 import org.junit.Test;
 import org.slf4j.Logger;
