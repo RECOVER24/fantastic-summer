@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd"
+	updateCheck="false">
+
+	<diskStore path="$HOME/caches" />
+
+	<defaultCache eternal="false" overflowToDisk="false"
+		maxElementsInMemory="50000" timeToIdleSeconds="30" timeToLiveSeconds="6000"
+		memoryStoreEvictionPolicy="LRU" />
+	
+	<!-- <cache name="role" maxElementsInMemory="1000" timeToIdleSeconds="3600" timeToLiveSeconds="3600" /> -->
+	
+</ehcache>
