@@ -9,6 +9,10 @@
 		maxElementsInMemory="50000" timeToIdleSeconds="30" timeToLiveSeconds="6000"
 		memoryStoreEvictionPolicy="LRU" />
 	
-	<!-- <cache name="role" maxElementsInMemory="1000" timeToIdleSeconds="3600" timeToLiveSeconds="3600" /> -->
+	<cache name="author" maxElementsInMemory="1000" timeToIdleSeconds="3600" timeToLiveSeconds="3600" />
+	<cache name="author_comic" maxElementsInMemory="1000" timeToIdleSeconds="3600" timeToLiveSeconds="3600" />
+	<cache name="comic" maxElementsInMemory="1000" timeToIdleSeconds="3600" timeToLiveSeconds="3600" />
+	<cache name="eposiode" maxElementsInMemory="1000" timeToIdleSeconds="3600" timeToLiveSeconds="3600" />
+	<cache name="image" maxElementsInMemory="1000" timeToIdleSeconds="3600" timeToLiveSeconds="3600" />
 	
 </ehcache>

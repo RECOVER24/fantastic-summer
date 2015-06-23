@@ -16,12 +16,27 @@
 		<plugin.maven.eclipse.version>2.9</plugin.maven.eclipse.version>
 		<plugin.maven.compiler.version>3.1</plugin.maven.compiler.version>
 		
+		<!-- db -->
+		<mysql.connector.version>5.1.30</mysql.connector.version>
+		<org.apache.commons.dbcp2.version>2.0.1</org.apache.commons.dbcp2.version>
+		<com.h2database.version>1.4.187</com.h2database.version>
+		
+		<!-- hibernate -->
+		<org.hibernate.version>4.3.8.Final</org.hibernate.version>
+		<net.sf.ehcache.version>2.9.1</net.sf.ehcache.version>
+		<org.hibernate.javax.persistence-jpa-2.1-api.version>1.0.0.Final</org.hibernate.javax.persistence-jpa-2.1-api.version>
+		<org.hibernate.validator.version>5.1.3.Final</org.hibernate.validator.version>
+		
+		<!-- javax -->
+		<javax.validation.version>1.1.0.Final</javax.validation.version>
+		
 		<!-- servlet -->
 		<javax.servlet.api.version>3.1.0</javax.servlet.api.version>
 		<javax.servlet.jsp.version>2.0</javax.servlet.jsp.version>
 		
 		<!-- spring -->
 		<org.springframework.version>4.1.6.RELEASE</org.springframework.version>
+		<org.springframework.data-jpa.version>1.8.0.RELEASE</org.springframework.data-jpa.version>
 		
 		<!-- log -->
 		<ch.qos.logback.version>1.1.3</ch.qos.logback.version>
@@ -45,6 +60,25 @@
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
 			<version>${ch.qos.logback.version}</version>
+		</dependency>
+		
+		<!-- database -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.connector.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>${com.h2database.version}</version>
+		</dependency>
+
+		<!-- JDBC -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-dbcp2</artifactId>
+			<version>${org.apache.commons.dbcp2.version}</version>
 		</dependency>
 		
 		<!-- servlet -->
@@ -91,6 +125,62 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context-support</artifactId>
 			<version>${org.springframework.version}</version>
+		</dependency>
+		
+		<!-- spring data jpa -->
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jpa</artifactId>
+			<version>${org.springframework.data-jpa.version}</version>
+		</dependency>
+		
+		<!-- hibernate -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${org.hibernate.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>${org.hibernate.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-ehcache</artifactId>
+			<version>${org.hibernate.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>net.sf.ehcache</groupId>
+					<artifactId>ehcache-core</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- ehcache -->
+		<dependency>
+			<groupId>net.sf.ehcache</groupId>
+			<artifactId>ehcache</artifactId>
+			<version>${net.sf.ehcache.version}</version>
+		</dependency>
+
+		<!-- hibernate-jpa-2.1-api -->
+		<dependency>
+			<groupId>org.hibernate.javax.persistence</groupId>
+			<artifactId>hibernate-jpa-2.1-api</artifactId>
+			<version>${org.hibernate.javax.persistence-jpa-2.1-api.version}</version>
+		</dependency>
+		
+		<!--  JSR-303 Bean Validation -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>${org.hibernate.validator.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+			<version>${javax.validation.version}</version>
 		</dependency>
 	
 		<!-- test -->
