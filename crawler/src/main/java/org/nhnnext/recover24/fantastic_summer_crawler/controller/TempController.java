@@ -9,7 +9,7 @@ public class TempController {
 
 	@RequestMapping(value="", method=RequestMethod.GET)
 	public String hello() {
-		System.out.println("hello ");
+		System.out.println("hello crawler");
 		return "index";
 	}
 }

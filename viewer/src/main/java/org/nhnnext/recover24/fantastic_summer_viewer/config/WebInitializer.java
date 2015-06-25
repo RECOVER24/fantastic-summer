@@ -4,6 +4,7 @@ import javax.servlet.FilterRegistration;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletRegistration;
 
+import org.nhnnext.recover24.fantastic_summer_viewer.config.web.WebConfig;
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
@@ -23,12 +24,12 @@ public class WebInitializer implements WebApplicationInitializer {
 	@Override
 	public void onStartup(ServletContext servletContext) {
 		// spring application context
-//		rootContext.register(AppConfig.class);
+		rootContext.register(AppConfig.class);
 		servletContext.addListener(new ContextLoaderListener(rootContext));
 
 		// spring application context의 dispatcher servlet
 		AnnotationConfigWebApplicationContext dispatcherContext = new AnnotationConfigWebApplicationContext();
-//		dispatcherContext.register(WebConfig.class);
+		dispatcherContext.register(WebConfig.class);
 
 		// dispatcher servlet 등록
 		ServletRegistration.Dynamic dispatcher = servletContext.addServlet(VIEWER, new DispatcherServlet(dispatcherContext));

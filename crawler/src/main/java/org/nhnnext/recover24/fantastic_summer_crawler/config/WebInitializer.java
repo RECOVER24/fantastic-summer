@@ -22,18 +22,17 @@ public class WebInitializer implements WebApplicationInitializer {
 	@Override
 	public void onStartup(ServletContext servletContext) {
 		
-//		rootContext.register(AppConfig.class);
+		rootContext.register(AppConfig.class);
 		servletContext.addListener(new ContextLoaderListener(rootContext));
 		
 		// spring application context의 dispatcher servlet
 		AnnotationConfigWebApplicationContext dispatcherContext = new AnnotationConfigWebApplicationContext();
 		dispatcherContext.register(AppConfig.class);
 
-
 		// dispatcher servlet 등록
 		ServletRegistration.Dynamic dispatcher = servletContext.addServlet("dispatcher", new DispatcherServlet(dispatcherContext));
 		dispatcher.setLoadOnStartup(1);
-		dispatcher.addMapping("/");
+		dispatcher.addMapping(ROOT);
 		dispatcher.setInitParameter("throwExceptionIfNoHandlerFound", "true");
 	}
 
