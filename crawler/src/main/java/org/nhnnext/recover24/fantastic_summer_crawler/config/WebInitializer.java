@@ -12,6 +12,13 @@ public class WebInitializer implements WebApplicationInitializer {
 
 	private final AnnotationConfigWebApplicationContext rootContext = new AnnotationConfigWebApplicationContext();
 	
+	private static final String ALL = "/*";
+	private static final String ROOT = "/";
+	private static final String MARKER = "marker";
+	private static final String UTF8 = "UTF-8";
+	private static final String TRUE = "true";
+
+	
 	@Override
 	public void onStartup(ServletContext servletContext) {
 		
@@ -21,6 +28,7 @@ public class WebInitializer implements WebApplicationInitializer {
 		// spring application context의 dispatcher servlet
 		AnnotationConfigWebApplicationContext dispatcherContext = new AnnotationConfigWebApplicationContext();
 		dispatcherContext.register(AppConfig.class);
+
 
 		// dispatcher servlet 등록
 		ServletRegistration.Dynamic dispatcher = servletContext.addServlet("dispatcher", new DispatcherServlet(dispatcherContext));
