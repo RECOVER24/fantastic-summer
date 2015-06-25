@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment>database-config</comment>
+
+	<!-- Database -->
+	<entry key="database.driverClassName">org.h2.Driver</entry>
+	<entry key="database.url">jdbc:h2:tcp://localhost/~/dev</entry>
+	<entry key="database.username">sa</entry>
+	<entry key="database.password"></entry>
+	
+	<!-- Hibernate -->
+	<entry key="hibernate.dialect">org.hibernate.dialect.H2Dialect</entry>
+	<entry key="hibernate.hbm2ddl.auto">create-drop</entry>
+	<entry key="hibernate.ejb.naming_strategy">org.hibernate.cfg.ImprovedNamingStrategy</entry>
+	<entry key="hibernate.show_sql">true</entry>
+	<entry key="hibernate.format_sql">true</entry>
+	<entry key="hibernate.generate_statistics">false</entry>
+	<entry key="hibernate.hbm2ddl.import_files">hibernate.hbm2ddl.import_files</entry>
+	
+	
+	<!-- For singleton factory -->
+	<entry key="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory</entry>
+	
+	<!-- enable second level cache and query cache -->
+	<entry key="hibernate.cache.use_second_level_cache">true</entry>
+	<entry key="hibernate.cache.use_query_cache">true</entry>
+	
+</properties>
